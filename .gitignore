@@ -1,0 +1,12 @@
+*.log
+*.txt
+aq_error_log.txt
+diag_output.txt
+install_log_*.txt
+pip_log.txt
+__pycache__/
+*.pyc
+.env
+.DS_Store
+static/mohit goyal.pdf
+

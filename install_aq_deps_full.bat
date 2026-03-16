@@ -1,0 +1,9 @@
+@echo off
+set PYTHON="d:\air quality prediction\.venv\Scripts\python.exe"
+echo Installing pandas numpy...
+%PYTHON% -m pip install pandas numpy > d:\portfolio\install_log_1.txt 2>&1
+echo Installing scikit-learn joblib...
+%PYTHON% -m pip install scikit-learn joblib > d:\portfolio\install_log_2.txt 2>&1
+echo Installing matplotlib seaborn...
+%PYTHON% -m pip install matplotlib seaborn > d:\portfolio\install_log_3.txt 2>&1
+echo Done.
