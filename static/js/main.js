@@ -15,6 +15,8 @@ const SKILLS = [
     { name: "Machine Learning", icon: "fa fa-brain",           color: "#a78bfa", bg: "rgba(167,139,250,0.15)",level: 82 },
     { name: "Data Visualization",icon:"fa fa-chart-line",      color: "#ec4899", bg: "rgba(236,72,153,0.15)", level: 86 },
     { name: "Statistics",       icon: "fa fa-square-root-variable", color: "#34d399", bg: "rgba(52,211,153,0.15)", level: 80 },
+    { name: "Flask",            icon: "fa fa-flask",           color: "#cbd5e1", bg: "rgba(203,213,225,0.15)", level: 85 },
+    { name: "Django",           icon: "fa fa-code",            color: "#10b981", bg: "rgba(16,185,129,0.15)", level: 80 },
 ];
 
 const PROJECTS = [
@@ -327,14 +329,12 @@ function renderProjects() {
 
         const tagsHTML = p.tags.map(t => `<span class="tag ${t.cls}">${t.label}</span>`).join('');
 
-        // Build the Live Demo button depending on whether a real URL exists
+        // Build the Live Demo button only when a real URL exists
         const demoBtn = p.demo
             ? `<a href="${p.demo}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" title="Open live project">
                    <i class="fa fa-external-link-alt"></i> Live Demo
                </a>`
-            : `<button class="btn btn-primary btn-sm btn-coming-soon" disabled title="Live demo coming soon">
-                   <i class="fa fa-clock"></i> Coming Soon
-               </button>`;
+            : ``;
 
         card.innerHTML = `
             <div class="project-img-wrap">
